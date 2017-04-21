@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 ### Dom position structure of player and adContainer
 
-Below is the sample html/css layout, shown the integration of your H5 video tag platyer and conSense SDK
+Below is the sample html/css layout, shown the integration of your H5 video tag player and ConSense SDK
 
 <b>index.html</b>
 ```html
