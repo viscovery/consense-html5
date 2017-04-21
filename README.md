@@ -63,7 +63,7 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
 </html>
 ```
 
-<b>style.css</c>
+<b>style.css</b>
 ```css
 * {
   padding: 0;
