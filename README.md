@@ -1,6 +1,8 @@
 # ConSense-html5-sdk
-Document and demo of Viscovery ConSense javascript sdk
+This is the document and demo of Viscovery ConSense html5 SDK<br>
+To see the preview sample, click the link below
 
+[https://viscovery.github.io/consense-html5/example/](https://viscovery.github.io/consense-html5/example/)
 ## Intro
 
 ConSense aims to help our video publishers to monetize their video content with content-relative ads. The whole adTech includes the integration of Viscovery's FITAMOS computer vision recognition technology.
