@@ -1,4 +1,4 @@
-# conSense-javascript-sdk
+# ConSense-html5-sdk
 Document and demo of Viscovery ConSense javascript sdk
 
 ## Intro
@@ -24,9 +24,20 @@ Setup a basic server to host your file
 
 The IMA SDK and ViscoverySDK need to be import to your html file
 
+<b>Import inside head tag</b>
 ```html
 <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-<script type="text/javascript" async src="<container_url>/visSDK.js?v=1.0.0"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55LM2S9');</script>
+```
+
+<b>Import after body tag</b>
+```html
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55LM2S9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ```
 
 ### Dom position structure of player and adContainer
@@ -39,7 +50,7 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>Viscovery conSense javascript SDK Demo</title>
+    <title>Viscovery ConSense javascript SDK Demo</title>
     <meta name="description" content="Viscovery 成立於2013年，專注於影音辨識技術開發，擁有多項演算法專利，被 Google 評選為成功企業與創新科技公司。經過多年圖像辨識技術研發的積累，及實地操作大量應用場景的基礎上，Viscovery 成功開發出 VDS 智能影音探索平台。"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,8 +58,12 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
     <link type="text/css" rel="stylesheet" href="./style.css" />
     <!-- STEP1: import ima -->
     <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-    <!-- STEP1: import conSense -->
-    <script type="text/javascript" async src="<container_url>/visSDK.js?v=1.0.0"></script>
+    <!-- STEP2: import ConSense SDK -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55LM2S9');</script>
   </head>
   <body>
     <div id="container">
@@ -60,6 +75,9 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
       <div id="adContainer"></div>
     </div>
   </body>
+  <!-- STEP2: import ConSense SDK -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55LM2S9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </html>
 ```
 

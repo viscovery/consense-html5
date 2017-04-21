@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--<script type="text/javascript" src="../lib/tracking.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Viscovery Demo Page</title>
+    <meta name="description" content="Viscovery 成立於2013年，專注於影音辨識技術開發，擁有多項演算法專利，被 Google 評選為成功企業與創新科技公司。經過多年圖像辨識技術研發的積累，及實地操作大量應用場景的基礎上，Viscovery 成功開發出 VDS 智能影音探索平台。"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/png" rel="shortcut icon" href="./favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55LM2S9');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="content">
+        <video id="content-player" class="player-layout" preload="metadata" width="854" height="480" playsinline controls>
+          <source src="https://viscovery-vsp-dev.s3.amazonaws.com/sdkdemo/Videos/%E5%95%9F%E5%8B%95%E6%84%9B%E6%83%85%E9%80%99%E4%BB%B6%E4%BA%8B-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E5%8B%87%E6%B0%A3-EP01-%E7%AC%AC%E4%B8%80%E9%9B%86.mp4"></source>
+        </video>
+      </div>
+      <div id="adContainer"></div>
+    </div>
+  </body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55LM2S9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript">
+    window.onload = function() {
+      conSense.init('#content-player', '#adContainer', {
+        api_key: '<api_key>', // the applied api key of conSense
+        videoId: 'https://video.site.url/<video_id>', // video content url
+      });
+    }
+  </script>
+</html>

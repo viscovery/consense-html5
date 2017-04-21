@@ -1,0 +1,35 @@
+{
+  "name": "consense-html5",
+  "version": "1.0.0",
+  "description": "document and sample code of ConSense html5 SDK",
+  "main": "index.html",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viscovery/consense-html5.git"
+  },
+  "keywords": [
+    "Viscovery",
+    "sdk",
+    "html5",
+    "computer",
+    "vision",
+    "FITAMOS"
+  ],
+  "author": "Ian Hung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viscovery/consense-html5/issues"
+  },
+  "homepage": "https://github.com/viscovery/consense-html5#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}
