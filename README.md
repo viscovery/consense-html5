@@ -76,6 +76,12 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
       </div>
       <div id="adContainer"></div>
     </div>
+    <div class="wording"> <!-- for testing outstream banner -->
+      <p>news content for outstream expanding testing : news content for outstream expanding testing</p>
+      <p>news content for outstream expanding testing : news content for outstream expanding testing</p>
+      <p>news content for outstream expanding testing : news content for outstream expanding testing</p>
+      <p>news content for outstream expanding testing : news content for outstream expanding testing</p>
+    </div>
   </body>
   <!-- STEP2: import ConSense SDK -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55LM2S9"
@@ -104,6 +110,11 @@ Below is the sample html/css layout, shown the integration of your H5 video tag 
   width: 854px;
   height: 480px;
 }
+
+#adContainer {
+  display: none;
+}
+
 
 #content-player {
   width: 854px;
@@ -137,16 +148,20 @@ conSense.init('#content-player', '#adContainer', ...)
 
 <table>
   <tr>
-    <td>key</td>
-    <td>description</td>
+    <td><b>key</b></td>
+    <td><b>description</b></td>
   </tr>
   <tr>
     <td>api_key</td>
-    <td>the applied api key for the currentr publisher</td>
+    <td>the applied api key for the current publisher</td>
   </tr>
   <tr>
-    <td>video_id</td>
-    <td>the video content source url</td>
+    <td>video_url</td>
+    <td>video encoded content url</td>
+  </tr>
+  <tr>
+    <td>debug_mode</td>
+    <td>switch of debug mode, 1 for open, 0 for close</td>
   </tr>
 </table>
 
@@ -155,8 +170,9 @@ conSense.init('#content-player', '#adContainer', ...)
 <script type="text/javascript">
   window.onload = function() {
     conSense.init('#content-player', '#adContainer', {
-      api_key: '<api_key>', // the applied api key of conSense
-      video_id: 'https://video.site.url/<video_id>', // video content url
+      api_key: '<api_key>', // <api_key> : the applied api key of conSense
+      video_url: "https://video.site.url/<video_id>", // <video_url> : video encoded content url
+      debug_mode: 1, // 1 for open, 0 for close
     });
   }
 </script>
@@ -169,8 +185,9 @@ conSense.init('#content-player', '#adContainer', ...)
 - ...
 
 ## Current Support Inventory size
-- PC instrem linear
+- PC instream linear
 - PC instream non-linear
+- PC outstream non-linear
 - mobile instream linear (non-skippable)
 - mobile instream non-linear
 
