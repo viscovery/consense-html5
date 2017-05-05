@@ -18,6 +18,10 @@
   height: 480px;
 }
 
+#adContainer {
+  display: none;
+}
+
 #content-player {
   width: 854px;
   height: 480px;
